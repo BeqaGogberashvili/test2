@@ -8,7 +8,7 @@ use App\Http\Controllers\LanguageController;
 use App\Models\Movie;
 use App\Models\Quote;
 
-Route::view('/', 'posts.index', ['quote' => Quote::inRandomOrder()->first()])->name('index');
+// Route::view('/', 'posts.index', ['quote' => Quote::inRandomOrder()->first()])->name('index');
 Route::controller(SessionsController::class)->group(function () {
     Route::view('login', 'sessions.create')->middleware('guest')->name('login');
     Route::post('login', 'store')->middleware('guest')->name('login.store');
